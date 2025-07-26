@@ -1,0 +1,18 @@
+import java.util.stream.Stream;
+import java.util.Arrays;
+
+public class LambdaArray {
+    public static void main(String[] args) {
+        String[] names = {"Anu", "Ravi", "Arun", "Meera", "Ajay"};
+
+        Stream.of(names).forEach(n : System.out.println(n));
+
+        Stream.of(names)
+              .filter(n : n.startsWith("A"))
+              .forEach(n : System.out.println(n));   // help
+
+        Arrays.stream(names)
+              .sorted()
+              .forEach(n : System.out.println(n));
+    }
+}
