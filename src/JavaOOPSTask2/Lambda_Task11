@@ -1,0 +1,16 @@
+@FunctionalInterface
+interface MathOperation {
+    int operate(int a, int b);
+}
+
+public class OperationDemo {
+    public static void main(String[] args) {
+        MathOperation add = (x, y) -> x + y;
+        MathOperation subtract = (x, y) -> x - y;
+        MathOperation multiply = (x, y) -> x * y;
+
+        System.out.println(add.operate(20, 8));
+        System.out.println(subtract.operate(20, 8));
+        System.out.println(multiply.operate(20, 8));
+    }
+}
