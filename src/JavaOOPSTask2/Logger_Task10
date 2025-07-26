@@ -1,0 +1,17 @@
+interface Logger {
+    default void logInfo() {
+        System.out.println("info log from default");
+    }
+
+    static void logError() {
+        System.out.println("error log from static");
+    }
+}
+
+public class AppLogger implements Logger {
+    public static void main(String args[]) {
+        AppLogger l = new AppLogger();
+        l.logInfo();
+        Logger.logError();
+    }
+}
